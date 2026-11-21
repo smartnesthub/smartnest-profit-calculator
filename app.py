@@ -67,10 +67,10 @@ st.subheader("Your Business Results")
 
 col1, col2 = st.columns(2)
 
-    with col1:
-        st.metric("Total Revenue", f"₦{total_revenue:,.2f}")
-        st.metric("Total Profit", f"₦{total_profit:,.2f}")
+with col1:
+    st.metric("Total Revenue", f"₦{total_revenue:,.2f}")
+    st.metric("Total Profit", f"₦{total_profit:,.2f}")
 
-    with col2:
-        st.metric("Total Expenses", f"₦{total_cost:,.2f}")
-        st.metric("Profit Margin", f"{profit_margin:.2f}%")
+with col2:
+    st.metric("Total Expenses", f"₦{total_cost:,.2f}")
+    st.metric("Profit Margin", f"{profit_margin:.2f}%")
