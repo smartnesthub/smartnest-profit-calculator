@@ -63,6 +63,35 @@ st.write(
 st.write(
     "Calculate your business revenue, expenses and profit easily."
 )
+st.subheader("Enter Your Business Details")
+
+cost_per_item = st.number_input(
+    "Cost Price per Item (₦)", min_value=0.0, value=0.0
+)
+
+selling_price = st.number_input(
+    "Selling Price per Item (₦)", min_value=0.0, value=0.0
+)
+
+quantity_sold = st.number_input(
+    "Quantity Sold", min_value=0, step=1
+)
+
+other_expenses = st.number_input(
+    "Additional Expenses (₦)", min_value=0.0, value=0.0
+)
+
+total_revenue = selling_price * quantity_sold
+
+total_cost = (cost_per_item * quantity_sold) + other_expenses
+
+total_profit = total_revenue - total_cost
+
+if total_revenue > 0:
+    profit_margin = (total_profit / total_revenue) * 100
+else:
+    profit_margin = 0
+    
 st.subheader("Your Business Results")
 
 col1, col2 = st.columns(2)
